@@ -1,5 +1,7 @@
 node {
     stage('Build Project'){
-        sh 'mvn clean install'
+        withMaven(
+            sh 'mvn clean install'
+        )
     }
 }
